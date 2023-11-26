@@ -1,0 +1,9 @@
+a3.o: a3.cpp
+	g++ main.cpp incremental_csv_reader.cpp l3_book.cpp -o a3 -std=c++17
+a3: a3.o
+	./a3 l3_market_data.csv l2	#test case 1
+	./a3 l3_market_data.csv l3	#test case 2
+	./a3 l3_market_data.drop.csv l2	#test case 3
+	./a3 l3_market_data.drop.csv l3	#test case 4
+clean:
+	rm a3
